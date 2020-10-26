@@ -42,11 +42,9 @@ $redCorlor : #C72C2C;
 
 .footer{
     @include flexCenter();
+    margin-top: auto;
     padding: 20px 70px;
     background-color: $mainColor;
-    position: sticky;
-    z-index: 100;
-    top: 0;
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 75);
 }
 
@@ -174,6 +172,70 @@ $redCorlor : #C72C2C;
             }
         }
         .cart__checkout{
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $grayColor;
+            p{
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .amount{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .btn__checkout{
+                padding: 10px 0px 10px 0px;
+                background-color: $redCorlor;
+                text-align: center;
+                font-weight: bold;
+                color: $whiteColor;
+                border-radius: 5px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.checkout{
+    @include flexCenter();
+    .checkout__table{
+        min-width: 50vw;
+        margin: 10px 0px 10px 0px;
+        padding: 10px 50px 10px 50px;
+        background-color: $whiteColor;
+        box-shadow: 5px 6px $grayColor;
+        display: flex;
+        flex-direction: column;
+        .checkout__header{
+            h4{
+                color: $redCorlor;
+                font-size: 30px;
+            }
+        }
+        .checkout__info{
+            display: flex;
+            flex-direction: column;
+            .info__item{
+                margin: 10px 0px 10px 0px;
+                display: flex;
+                justify-content: space-between;
+                label{
+                    flex: 30%;
+                    font-weight: bold;
+                }
+                input{
+                    padding: 5px 0px 5px 0px;
+                    background-color: $whiteColor;
+                    border: 2px solid $grayColor;
+                    border-radius: 10px;
+                    flex: 70%;
+                }
+            }
+        }
+        .checkout__detail{
             display: flex;
             flex-direction: column;
             border-top: 2px solid $grayColor;

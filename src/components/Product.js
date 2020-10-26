@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
+import axios from 'axios';
+import '../config';
 import '../styles/style.scss';
 
 function Product() {
@@ -18,5 +20,36 @@ function Product() {
         </div>
     )
 }
+
+// function Product({match}) {
+//     const [product, setProduct] = useState({});
+
+//     useEffect(() => {
+//         fetchItem();
+//     }, [])
+
+//     const fetchItem = async => {
+//         axios.get(`${global.config.server.link}/product/${match.params.id}`)
+//         .then(res =>{
+//             setProduct(res.data);
+//         })
+//     }
+
+//     return (
+//         <div className="product">
+//             <div className="product__left">
+//                 <h1 id="name" name="name">{product.name}</h1>
+//                 <p id="description" name="description">{product.description}</p>
+//                 <img src={product.img} alt={product.name}/>
+//                 <h2 id="price" name="price">{product.price}</h2>
+//             </div>
+//             <div className="product__right">
+//                 <div className="btn__add">
+//                     THÊM VÀO GIỎ HÀNG
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
 
 export default Product

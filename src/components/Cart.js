@@ -1,8 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../styles/style.scss';
 import CartItem from './CartItem';
 
 function Cart() {
+    const navStyle = {
+        textDecoration : 'none'
+    };
+
     return (
         <div className="cart">
             <div className="cart__table">
@@ -15,9 +20,11 @@ function Cart() {
                         <p>TỔNG CỘNG</p>
                         <p>298.000 ₫</p>
                     </div>
-                    <div className="btn__checkout">
-                        THANH TOÁN
-                    </div>
+                    <Link to="./checkout" style={navStyle}>
+                        <div className="btn__checkout">
+                            THANH TOÁN
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
