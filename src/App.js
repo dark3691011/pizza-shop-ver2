@@ -6,6 +6,9 @@ import Header from './components/Header';
 import Product from './components/Product';
 import Cart from './components/Cart';
 import CheckOut from './components/CheckOut';
+import Login from './components/Login';
+import Category from './components/Category';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -13,8 +16,11 @@ function App() {
       <div className="app">
         <Header/>
         <Switch>
-          <Route path="/category" exact component={Menu} />
-          <Route path="/category/:id" component={Product} />
+          <Route path="/" exact component={Category}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/register" component={Register}/>
+          <Route path="/menu" exact component={Menu} />
+          <Route path="/menu/:id" component={Product} />
           {/* <Route path="/product" component={Product} /> */}
           <Route path="/cart" component={Cart} />
           <Route path="/checkout" component={CheckOut} />

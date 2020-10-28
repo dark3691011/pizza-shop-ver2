@@ -14,15 +14,15 @@ function Header() {
     return (
         <div className="header">
             <div className="header__left">
-                <Link to="./"> <img src={logo} alt="logo"/> </Link>              
+                <Link to="/"> <img src={logo} alt="logo"/> </Link>              
             </div>
 
             <div className="header__right">
                 <div className="login__status">
-                    <a href="/">ĐĂNG NHẬP</a>
-                    <a href="/">ĐĂNG KÝ</a>
+                    <Link to="/login" style={navStyle}>ĐĂNG NHẬP</Link>
+                    <Link to="/register" style={navStyle}>ĐĂNG KÝ</Link>
                 </div>
-                <Link to="./cart" style={navStyle}> <ShoppingCartIcon/> </Link>              
+                <Link to="/cart" style={navStyle}> <ShoppingCartIcon/> </Link>              
             </div>
         </div>
     )
